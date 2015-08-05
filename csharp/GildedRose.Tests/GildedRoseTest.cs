@@ -1,8 +1,9 @@
 using System;
 using NUnit.Framework;
 using System.Collections.Generic;
+using GildedRose;
 
-namespace GildedRose
+namespace GildedRose.Tests
 {
 	[TestFixture()]
 	public class GildedRoseTest
@@ -10,7 +11,7 @@ namespace GildedRose
 		[Test()]
 		public void foo() {
 			IList<Item> Items = new List<Item> { new Item{Name = "foo", SellIn = 0, Quality = 0} };
-			GildedRose app = new GildedRose(Items);
+            GildedRose app = new GildedRose(Items);
 			app.UpdateQuality();
 			Assert.AreEqual("fixme", Items[0].Name);
 		}
